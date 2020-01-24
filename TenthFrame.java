@@ -44,6 +44,10 @@ public class TenthFrame extends Frame
 			isBonus = true;
 		}
 		tempScore += charToScore(secondThrow);
+		if(secondThrowVal < 0)
+		{
+			tempScore -= charToScore(firstThrow);
+		}
 
 		if(isBonus)
 		{

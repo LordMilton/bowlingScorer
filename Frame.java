@@ -80,7 +80,7 @@ public class Frame
 			}
 			else
 			{
-				tempScore += charToScore(secondThrow);
+				tempScore += charToScore(secondThrow) - charToScore(firstThrow);
 				tempScore += charToScore(nextFrame.getFirstThrow());
 			}
 		}

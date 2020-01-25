@@ -51,6 +51,10 @@ public class Frame
 			if(nextFrame.getSecondThrow() >= 47)
 			{
 				tempScore += charToScore(nextFrame.getSecondThrow());
+				if(nextFrame.getSecondThrow() == 47) // If second throw is a spare, just want to double 10 instead of 10 + firstThrow
+				{
+					tempScore -= charToScore(nextFrame.getFirstThrow());
+				}
 			}
 			else
 			{
@@ -85,7 +89,7 @@ public class Frame
 			}
 		}
 
-	//	System.err.println(tempScore);
+		System.err.println(tempScore);
 		cumScore = tempScore;
 	}
 

@@ -85,7 +85,7 @@ public class Frame
 			}
 		}
 
-		System.err.println(tempScore);
+	//	System.err.println(tempScore);
 		cumScore = tempScore;
 	}
 

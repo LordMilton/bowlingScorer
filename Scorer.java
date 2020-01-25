@@ -13,7 +13,7 @@ public class Scorer
 			frames[i].calcScore(frames[i-1].getCumScore());
 		}
 
-		System.out.println(frames[numFrames-1].getCumScore());
+		System.out.println("Final Score: "+ frames[numFrames-1].getCumScore());
 	}
 
 	public static Frame[] buildFrames(String[] frameStrings)

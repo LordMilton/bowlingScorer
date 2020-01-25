@@ -7,6 +7,9 @@ Input is expected as a string of 10 frames each separated by a '-' where a frame
 ## Issues (acceptable within expected scope)
 
 Normal frames in which a strike occurs will accept a second throw but the second throw will be ignored.
+
 Normal open frames with two values adding to more than 9 will be accepted.
+
 Tenth frames will not check if the bonus throw(s) has been recorded.
+
 Tenth frames will accept a spare immediately after a strike or two spares in a row.

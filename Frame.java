@@ -27,13 +27,11 @@ public class Frame
 		return nextFrame;
 	}
 
-	//This should never return null
 	public char getFirstThrow()
 	{
 		return firstThrow;
 	}
 
-	//This can return null
 	public char getSecondThrow()
 	{
 		return secondThrow;

@@ -11,7 +11,6 @@ public class TenthFrame extends Frame
 		this.thirdThrow = thirdThrow;
 	}
 
-	//This can return null
 	public char getThirdThrow()
 	{
 		return thirdThrow;

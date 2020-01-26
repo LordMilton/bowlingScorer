@@ -43,6 +43,8 @@ public class Scorer
 		try{
 			thirdThrow = curFrameString.charAt(2);
 		}catch(StringIndexOutOfBoundsException e){
+			System.err.println("Tenth frame bonus throw missing...exiting");
+			System.exit(2);
 		}
 
 		frames[numFrames-1] = new TenthFrame(firstThrow, secondThrow, thirdThrow);

@@ -1,5 +1,9 @@
 Scores a bowling game in a professional and very employable manner.
 
+## Running
+
+The main method is in Scorer.java. Program expects a single command-line argument.
+
 ## Input
 
 Input is expected as a string of 10 frames each separated by a '-' where a frame is either a 'X' for a strike, a digit and then a '/' for a spare, or two digits in a row for an open frame. Frames beginning with a '/' or having a second throw of 'X' will result in an appropriate error message and a final score will not be provided. The tenth frame should be a combination of two: digits, '/'s, 'X's as long as the first value is not a '/'. The tenth frame should contain a third throw if either a '/' or 'X' occurred in the first two throws.

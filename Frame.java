@@ -1,18 +1,22 @@
 public class Frame
 {
+	// Cumulative score
 	protected int cumScore;
 	protected char firstThrow;
 	protected char secondThrow; //Values less than 47 will be interpreted as a non-existent
 				    //throw (in the case of strikes)
+	// Next frame in the game for purposes of calculating spares and strikes
 	protected Frame nextFrame;
 	protected boolean isTenth;
 
 	//In the case of a strike, @param secondThrow should be some value less than 47
 	public Frame(char firstThrow, char secondThrow)
 	{
+		cumScore = 0;
 		this.firstThrow = firstThrow;
 		this.secondThrow = secondThrow;
 		isTenth = false;
+		nextFrame = null;
 	}
 
 	public void setNextFrame(Frame frame)
@@ -37,8 +41,16 @@ public class Frame
 		return secondThrow;
 	}
 
+	//Calculates score for this frame
+	//setNextFrame() MUST BE USED BEFORE THIS METHOD, else a null pointer exception will be thrown
 	public void calcScore(int latestScore)
 	{
+		if(nextFrame == null)
+		{
+			System.err.println("No next frame set");
+			throw new NullPointerException();
+		}
+
 		int tempScore = latestScore;
 		int firstThrowVal = firstThrow - 48;
 		int secondThrowVal = secondThrow - 48;
@@ -102,7 +114,8 @@ public class Frame
 	{
 		return cumScore;
 	}
-
+	
+	//Helper method for translating the character representing a throw into an integer score
 	protected int charToScore(char c)
 	{
 		int score = c - 48;

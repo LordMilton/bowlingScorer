@@ -18,6 +18,7 @@ public class TenthFrame extends Frame
 		return thirdThrow;
 	}
 
+	//Calculates score for this frame which should be the final score for the game
 	public void calcScore(int latestScore)
 	{
 		int tempScore = latestScore;

@@ -9,7 +9,6 @@ public class TenthFrame extends Frame
 	{
 		super(firstThrow, secondThrow);
 		this.thirdThrow = thirdThrow;
-		isTenth = true;
 	}
 
 	//This can return null

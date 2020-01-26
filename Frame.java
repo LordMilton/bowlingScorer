@@ -7,7 +7,6 @@ public class Frame
 				    //throw (in the case of strikes)
 	// Next frame in the game for purposes of calculating spares and strikes
 	protected Frame nextFrame;
-	protected boolean isTenth;
 
 	//In the case of a strike, @param secondThrow should be some value less than 47
 	public Frame(char firstThrow, char secondThrow)
@@ -15,7 +14,6 @@ public class Frame
 		cumScore = 0;
 		this.firstThrow = firstThrow;
 		this.secondThrow = secondThrow;
-		isTenth = false;
 		nextFrame = null;
 	}
 
@@ -103,11 +101,6 @@ public class Frame
 
 		System.err.println(tempScore);
 		cumScore = tempScore;
-	}
-
-	public boolean isTenth()
-	{
-		return isTenth;
 	}
 
 	public int getCumScore()
